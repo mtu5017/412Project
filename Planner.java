@@ -6,7 +6,7 @@
 package mvcwallyland;
 
 /**
- *
+ * Planner serves as the model in this app.
  * @author mattu
  */
 public class Planner {

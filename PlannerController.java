@@ -6,7 +6,7 @@
 package mvcwallyland;
 
 /**
- *
+ * The controller is responsible for communicating with the different classes in the app to create a cohesive user experience.
  * @author mattu
  */
 public class PlannerController {
@@ -54,27 +54,14 @@ public class PlannerController {
       */
      public String getDescription(){
          return model.getDescription();
-     }
+     } 
      
      /**
-      * Simple method to confirm a user's choice and display a confirmation message.
-      * @param choice 
-      */    
-     public void createEventPrompt(int choice){
-        if(choice == 1){
-            System.out.println("You're confirmed for the Log Flume at 8:00am.");
-        }
-        else if(choice == 2){
-            System.out.println("You're confirmed for the Merry-Go-Round at 8:45am.");
-        }
-       else if(choice == 3){
-            System.out.println("You're confirmed for the Raging Rapids at 9:00am.");
-       }
-       else{
-            System.out.println("Sorry, we couldn't confirm your event.");
-       }
-
-    }
+      * Method to print the events to the user based on data that can be updated.
+      */
+     public void displayEvents(){
+         view.printDailyEvents(model.getTime(), model.getDescription());
+     }
      
     
     
