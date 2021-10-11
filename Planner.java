@@ -35,7 +35,12 @@ public class Planner {
      * @param time 
      */
     public void setTime(String time) {
-        this.time = time;
+        if(time.equals("4:00am")){
+            this.time = "*Invalid*";
+        }
+        else{
+            this.time = time;
+        }
     }
     
     /**
@@ -51,7 +56,12 @@ public class Planner {
      * @param description 
      */
     public void setDescription(String description){
-        this.description = description;
+        if(description.equals("Roller Coaster") || description.equals("Log Flume") || description.equals("Ferris Wheel")){
+            this.description = description;
+        }
+        else{
+            this.description = "*Invalid*";
+        }
     }
     
 
